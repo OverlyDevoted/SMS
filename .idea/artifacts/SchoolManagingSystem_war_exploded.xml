@@ -1,0 +1,32 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SchoolManagingSystem:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SchoolManagingSystem_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="SchoolManagingSystem/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SchoolManagingSystem" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql.connector.java" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:16" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:16" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:16" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:16" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-base:16" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:16" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:16" />
+          <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:16" />
+          <element id="library" level="project" name="Maven: org.mortbay.jetty:jetty:6.1.25" />
+          <element id="library" level="project" name="Maven: org.mortbay.jetty:jetty-util:6.1.25" />
+          <element id="library" level="project" name="Maven: org.mortbay.jetty:servlet-api:2.5-20081211" />
+          <element id="library" level="project" name="Spring-5.2.3.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-5.2.3.RELEASE" />
+          <element id="library" level="project" name="Spring Security-5.2.1" />
+          <element id="library" level="project" name="Spring Web Services-2.0.2" />
+          <element id="library" level="project" name="google.code.gson" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

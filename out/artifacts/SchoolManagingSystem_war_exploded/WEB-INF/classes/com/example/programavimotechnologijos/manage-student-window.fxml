@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.control.ManageStudentWindow">
+   <children>
+      <TableView fx:id="tableView" layoutY="134.0" prefHeight="266.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="154.0" text="Name" />
+          <TableColumn fx:id="surnameColumn" prefWidth="138.0" text="Surname" />
+            <TableColumn fx:id="emailColumn" prefWidth="137.0" text="Email" />
+            <TableColumn fx:id="groupColumn" prefWidth="95.0" text="Group" />
+        </columns>
+      </TableView>
+      <Button layoutX="47.0" layoutY="96.0" mnemonicParsing="false" onAction="#filterList" text="Filter" />
+      <Button layoutX="545.0" layoutY="96.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      <ChoiceBox fx:id="groupChoice" layoutX="47.0" layoutY="59.0" prefWidth="150.0" />
+      <Label layoutX="47.0" layoutY="42.0" text="Group" />
+      <Label layoutX="47.0" layoutY="19.0" text="Filter students by groups" />
+   </children>
+</AnchorPane>

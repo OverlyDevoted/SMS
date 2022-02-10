@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="429.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.control.TeacherWindow">
+   <children>
+      <Label fx:id="greetingField" layoutX="168.0" layoutY="27.0" prefHeight="17.0" prefWidth="265.0" text="Placeholder" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="168.0" AnchorPane.rightAnchor="161.0" AnchorPane.topAnchor="27.0" />
+      <Label layoutX="230.0" layoutY="6.0" text="Control Panel for Teachers" />
+      <AnchorPane layoutX="6.0" layoutY="35.0" prefHeight="365.0" prefWidth="606.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-18.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <MenuBar layoutX="-7.0" layoutY="14.0" prefHeight="351.0" prefWidth="594.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="14.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Courses">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openCourseManager" text="Manage" />
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Groups">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#openGroupsWindow" text="Manage" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Students">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openStudents" text="View" />
+                     </items></Menu>
+                  <Menu mnemonicParsing="false" text="Subjects">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#setSubjectCreateAnchorVisible" text="View" />
+                        <MenuItem mnemonicParsing="false" onAction="#openSubjectManage" text="Create" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Teachers">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openTeacherManage" text="View" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <AnchorPane fx:id="subject_create_anchor" layoutX="9.0" layoutY="27.0" prefHeight="338.0" prefWidth="563.0" visible="false">
+               <children>
+                  <Label layoutX="213.0" layoutY="14.0" text="View the subject hierarchy" />
+                  <TreeTableView fx:id="treeTable" layoutX="14.0" layoutY="42.0" prefHeight="243.0" prefWidth="523.0">
+                    <columns>
+                      <TreeTableColumn fx:id="idTreeColumn" prefWidth="65.0" text="ID" />
+                        <TreeTableColumn fx:id="nameTreeColumn" prefWidth="100.0" text="Name" />
+                        <TreeTableColumn fx:id="descriptionTreeColumn" prefWidth="356.0" text="Description" />
+                    </columns>
+                  </TreeTableView>
+               </children>
+            </AnchorPane>
+            <Button layoutX="525.0" layoutY="320.0" mnemonicParsing="false" onAction="#loadLoginWindow" text="Log out" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="subject_name" visible="false" />
+   </children>
+</AnchorPane>

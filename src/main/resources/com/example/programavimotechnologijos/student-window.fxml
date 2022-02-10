@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.control.StudentWindow">
+   <children>
+      <AnchorPane fx:id="chooseGroupAnchor" layoutX="5.0" layoutY="5.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="262.0" layoutY="126.0" text="Choose Group" />
+            <Button layoutX="275.0" layoutY="188.0" mnemonicParsing="false" onAction="#chooseGroup" text="Enter" />
+            <ChoiceBox fx:id="groupDrop" layoutX="225.0" layoutY="152.0" prefWidth="150.0" />
+            <Button layoutX="545.0" layoutY="339.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+            <Button layoutX="537.0" layoutY="374.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="chooseCourseAnchor" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="261.0" layoutY="140.0" text="Choose course" />
+            <Button layoutX="274.0" layoutY="211.0" mnemonicParsing="false" onAction="#chooseCourse" text="Enter" />
+            <ChoiceBox fx:id="courseDrop" layoutX="225.0" layoutY="167.0" prefWidth="150.0" />
+            <Button layoutX="529.0" layoutY="361.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="courseInfoAnchor" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label fx:id="userText" layoutX="185.0" layoutY="22.0" text="Placeholder" textAlignment="CENTER" />
+            <TreeTableView fx:id="treeTable" layoutX="-10.0" layoutY="105.0" prefHeight="295.0" prefWidth="610.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="0.0">
+               <columns>
+                  <TreeTableColumn fx:id="idTreeColumn" prefWidth="75.0" text="ID" />
+                  <TreeTableColumn fx:id="nameTreeColumn" prefWidth="75.0" text="Name" />
+                  <TreeTableColumn fx:id="descriptionTreeColumn" prefWidth="75.0" text="Description" />
+               </columns></TreeTableView>
+            <Label fx:id="courseText" layoutX="185.0" layoutY="39.0" text="Placeholder" textAlignment="CENTER" />
+            <Button layoutX="529.0" layoutY="73.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
+            <Button layoutX="411.0" layoutY="73.0" mnemonicParsing="false" onAction="#unenroll" text="Leave course" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
